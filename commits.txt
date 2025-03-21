@@ -1,3 +1,5 @@
+9dd45fa Final version of the game with increased projectile speed and faster ball movement
+e459ab9 Agregando historial de commits
 34935ad Update README.md
 b4f2067 Merge pull request #2 from martin-M90/infinite-game
 6e3dcc8 Implementación de juego infinito - Los balones reaparecen
