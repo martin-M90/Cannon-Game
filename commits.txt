@@ -1,0 +1,8 @@
+34935ad Update README.md
+b4f2067 Merge pull request #2 from martin-M90/infinite-game
+6e3dcc8 Implementación de juego infinito - Los balones reaparecen
+cf75eaf Merge pull request #1 from martin-M90/speed-up
+a2441bf Aumento de velocidad en proyectil y balones
+566a25a Primer commit - Inicialización del repositorio con el código base
+87f260d Update README.md
+6e15af7 Initial commit
