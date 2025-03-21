@@ -1,39 +1,25 @@
-"""Cannon, hitting targets with projectiles.
-
-Exercises
-
-1. Keep score by counting target hits.
-2. Vary the effect of gravity.
-3. Apply gravity to the targets.
-4. Change the speed of the ball.
-"""
-
 from random import randrange
 from turtle import *
-
 from freegames import vector
 
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
-
 def tap(x, y):
-    """Respond to screen tap."""
+    "Respond to screen tap."
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
-
+        speed.x = (x + 200) / 15  # Aumentamos la velocidad
+        speed.y = (y + 200) / 15  # Aumentamos la velocidad
 
 def inside(xy):
-    """Return True if xy within screen."""
+    "Return True if xy within screen."
     return -200 < xy.x < 200 and -200 < xy.y < 200
 
-
 def draw():
-    """Draw ball and targets."""
+    "Draw ball and targets."
     clear()
 
     for target in targets:
@@ -46,16 +32,15 @@ def draw():
 
     update()
 
-
 def move():
-    """Move ball and targets."""
+    "Move ball and targets."
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5
+        target.x -= 1.0  # Aumentamos la velocidad de los balones
 
     if inside(ball):
         speed.y -= 0.35
@@ -74,8 +59,7 @@ def move():
         if not inside(target):
             return
 
-    ontimer(move, 50)
-
+    ontimer(move, 30)  # Reducimos el tiempo para hacer el juego más rápido
 
 setup(420, 420, 370, 0)
 hideturtle()
